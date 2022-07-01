@@ -9,7 +9,8 @@ public abstract class Car {
     private String fuelSource;
     private String color;
 
-    public Car(int horsePower, String fuelSource, String color) {
+    public Car(String brand, int horsePower, String fuelSource, String color) {
+        this.brand = brand;
         this.horsePower = horsePower;
         this.fuelSource = fuelSource;
         this.color = color;
@@ -32,13 +33,5 @@ public abstract class Car {
     public void fuelCar() {
         System.out.println("Car is being filled with " +
                 fuelSource.toLowerCase(Locale.ROOT));
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
     }
 }
